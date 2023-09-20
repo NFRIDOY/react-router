@@ -1,16 +1,21 @@
 import { useState } from 'react'
 import './App.css'
+import { Link, Outlet } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1 className='bg-blue-500 text-white'>This is h1 header</h1>
+      <h1 className='bg-blue-500 text-white'>Its Home</h1>
 
-      <button className='btn btn-primary' onClick={() => setCount((count) => count + 1)}>
-      Primary count is {count}
-      </button>
+      <Header></Header>
+      
+      <Outlet></Outlet>
+
+      <Footer></Footer>
     </>
   )
 }
