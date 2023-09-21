@@ -10,7 +10,7 @@ export default function Header() {
                     
                 </div>
                 <div className="flex flex-row gap-10"> 
-                    <Link to="/home">Home</Link>
+                    <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
                     <Link to="/contract">Contract</Link>
                 </div>

@@ -9,24 +9,29 @@ import {
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Contract from './pages/Contract.jsx';
+import Error from './pages/Error.jsx';
 // import { reactRouter } from './module/reactRouter.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <Error/>,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home></Home>,
+        errorElement: <Error/>,
       },
       {
         path: "/about",
         element: <About />,
+        errorElement: <Error/>,
       },
       {
         path: "/contract",
         element: <Contract />,
+        errorElement: <Error/>,
       },
     ]
   },
