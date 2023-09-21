@@ -11,6 +11,8 @@ import About from './pages/About.jsx';
 import Contract from './pages/Contract.jsx';
 import Error from './pages/Error.jsx';
 import Users from './pages/Users.jsx';
+import UserDetails from './components/Users/UserDetails.jsx';
+import Posts from './pages/Posts.jsx';
 // import { reactRouter } from './module/reactRouter.jsx'
 
 const router = createBrowserRouter([
@@ -38,6 +40,19 @@ const router = createBrowserRouter([
         path: "/users",
         loader: () => fetch('https://jsonplaceholder.typicode.com/users') ,
         element: <Users />,
+        errorElement: <Error/>,
+      },
+      {
+        path: "/users/:userId",
+        // loader: ({params}) => console.log(params.userId),
+        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+        element: <UserDetails />,
+        errorElement: <Error/>,
+      },
+      {
+        path: "/posts",
+        loader: () => fetch(`https://jsonplaceholder.typicode.com/posts`),
+        element: <Posts />,
         errorElement: <Error/>,
       },
     ]

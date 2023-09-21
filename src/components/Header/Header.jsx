@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
+import './Header.css'
+// import {  } from "react-router-dom"
 
 export default function Header() {
     return (
@@ -10,10 +12,13 @@ export default function Header() {
                     
                 </div>
                 <div className="flex flex-row gap-10"> 
-                    <Link to="/">Home</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/contract">Contract</Link>
-                    <Link to="/users">User</Link>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/contract">Contract</NavLink>
+                    <NavLink to="/users">User</NavLink>
+                    <NavLink to="/posts">Post</NavLink>
+                    
+
                 </div>
             </nav>
         </>
