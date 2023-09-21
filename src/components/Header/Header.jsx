@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export default function Header() {
     return (
         <>
-            <nav className="flex flex-row justify-between bg-violet-500 text-white">
+            <nav className="flex flex-row justify-between bg-violet-900 text-white px-20 font-bold py-2">
                 {/* <Link to="/">App</Link> */}
                 <div>
                     <Link to="/home"><img src="react.svg" alt="" /></Link>
@@ -13,6 +13,7 @@ export default function Header() {
                     <Link to="/">Home</Link>
                     <Link to="/about">About</Link>
                     <Link to="/contract">Contract</Link>
+                    <Link to="/users">User</Link>
                 </div>
             </nav>
         </>

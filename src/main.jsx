@@ -10,6 +10,7 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Contract from './pages/Contract.jsx';
 import Error from './pages/Error.jsx';
+import Users from './pages/Users.jsx';
 // import { reactRouter } from './module/reactRouter.jsx'
 
 const router = createBrowserRouter([
@@ -31,6 +32,12 @@ const router = createBrowserRouter([
       {
         path: "/contract",
         element: <Contract />,
+        errorElement: <Error/>,
+      },
+      {
+        path: "/users",
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users') ,
+        element: <Users />,
         errorElement: <Error/>,
       },
     ]
